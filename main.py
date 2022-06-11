@@ -4,9 +4,7 @@ possible_outcomes = ["R", "P", "S"]
 print("----The game is Rock, Paper, Scissors---- ")
 
 #Player gets to choose
-rock = "R"
-paper = "P"
-scissors = "S"
+rock, paper, scissors = "R", "P", "S"
 
 print("{0} for rock,\n {1} for paper,\n{2} for scissors ".format(rock, paper, scissors))
 
