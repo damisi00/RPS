@@ -20,8 +20,6 @@ while startOver:
         if user_move in possible_outcomes:
             isNotValid = False
             print("Player({0}) : CPU({1})".format(user_move, cpu_move))
-        elif user_move == cpu_move:
-            continue
         else:
             print("Invalid Input!")
             continue
