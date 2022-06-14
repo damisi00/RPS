@@ -1,7 +1,13 @@
 import random
 
 possible_outcomes = ["R", "P", "S"]
-print("----The game is Rock, Paper, Scissors---- ")
+dict_outcomes = { 
+    "R": "Rock",
+    "P": "Paper",
+    "S": "Scissors"
+}
+
+print("----The game is Rock, Paper, Scissors----")
 
 #Player gets to choose
 rock, paper, scissors = "R", "P", "S"
@@ -17,9 +23,11 @@ while startOver:
     isNotValid = True
     while isNotValid:
         user_move = str(input("Please pick an option between R, P or S:  \n ").upper())
-        if user_move in possible_outcomes:
+        player = dict_outcomes.get(user_move)
+        cpu = dict_outcomes.get(cpu_move)
+        if user_move in dict_outcomes.keys():
             isNotValid = False
-            print("Player({0}) : CPU({1})".format(user_move, cpu_move))
+            print("Player({0}) : CPU({1})".format(player, cpu))
         else:
             print("Invalid Input!")
             continue
